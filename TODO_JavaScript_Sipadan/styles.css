@@ -1,0 +1,170 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container, .register-container {
+    background-color: #fff;
+    padding: 40px; /* Espacio interior aumentado */
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px; /* Ancho del contenedor aumentado */
+    margin: auto; /* Centrar el contenedor si es necesario */
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 30px; /* Aumentar el espacio debajo del título */
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Aumentar el espacio entre campos de entrada */
+}
+
+.form-group label {
+    flex: 0 0 120px; /* Ancho fijo para los labels aumentado */
+    margin-right: 10px;
+    text-align: right;
+}
+
+.form-group input {
+    flex: 1; /* Los inputs ocupan el espacio restante */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.btn, button.btn {
+    width: calc(100% - 20px); /* Ajustar ancho para incluir el padding */
+    padding: 15px; /* Aumentar el padding para un botón más grande */
+    border: none;
+    border-radius: 4px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #ffa500;
+    color: white;
+    text-align: center;
+    transition: background-color 0.3s; /* Efecto suave al pasar el mouse */
+}
+
+.btn:hover, button.btn:hover {
+    background-color: #e69500; /* Efecto hover para el botón */
+}
+
+.btn:focus, button.btn:focus {
+    outline: none;
+}
+
+/* Añadir un poco de espacio en la parte inferior del contenedor */
+.login-container:after, .register-container:after {
+    content: '';
+    display: block;
+    height: 20px;
+}
+
+.tasks-container {
+    background-color: #fff;
+    padding: 20px; /* Ajustar el relleno interior según sea necesario */
+    margin: 20px; /* Establecer márgenes en todos los lados */
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: calc(100% - 40px); /* Ancho menos los márgenes */
+    max-width: 1200px; /* Opcional: un ancho máximo si lo prefieres */
+    height: calc(100vh - 60px); /* Altura menos los márgenes */
+    overflow: auto; /* Para manejar el desbordamiento de contenido */
+}
+
+/* Estilos para el header */
+.tasks-container header {
+    display: flex;
+    justify-content: space-between; /* Alinea los elementos a los lados */
+    align-items: center; /* Centra los elementos verticalmente */
+    padding: 10px;
+    border-bottom: 1px solid #ddd; /* Línea divisoria debajo del header */
+}
+
+/* Estilos para main */
+.tasks-container main {
+    padding: 10px;
+    border-bottom: 1px solid #ddd; /* Línea divisoria debajo de main */
+}
+
+/* Estilos para section */
+.tasks-container section {
+    padding: 10px;
+}
+
+/* Estilos adicionales para los elementos dentro del header si es necesario */
+.tasks-container header .user-info,
+.tasks-container header .logout-btn {
+    margin: 0 10px; /* Añade espaciado alrededor de los elementos */
+}
+/* Estilo para la lista de tareas */
+.task-list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espacio entre tareas */
+}
+
+/* Estilo para cada tarea individual */
+.task-item {
+    background-color: #e9e9e9;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilo para botones dentro de las tareas */
+.task-item button {
+    padding: 5px 10px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.task-item button:hover {
+    background-color: #45a049;
+}
+
+/* Estilo para el área de entrada de nuevas tareas */
+.task-actions {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.task-actions input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.task-actions button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #008CBA;
+    color: white;
+    cursor: pointer;
+}
+
+.task-actions button:hover {
+    background-color: #007ba7;
+}
