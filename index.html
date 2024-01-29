@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App Multi-Función</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Login -->
+    <div id="login-section" class="login-container">
+      <h2>Login</h2>
+      <form
+        id="loginForm"
+        action="javascript:void(0);"
+        onsubmit="loginUser(); return false;"
+      >
+        <div class="form-group">
+          <label for="username">Usuario:</label>
+          <input type="text" id="username" name="username" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Clave:</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <div id="errorContainer" class="error-message"></div>
+        <!-- Contenedor para mensajes de error -->
+        <button type="submit" class="btn login-btn">Iniciar Sesión</button>
+        <button
+          type="button"
+          class="btn register-btn"
+          onclick="showRegister();"
+        >
+          Registrarse
+        </button>
+      </form>
+    </div>
+
+    <!-- Registro -->
+    <div id="register-section" class="register-container" style="display: none">
+      <h2>Registro</h2>
+      <form
+        id="registerForm"
+        action="javascript:void(0);"
+        onsubmit="registerUser(); return false;"
+      >
+        <div class="form-group">
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="new-username">Usuario:</label>
+          <input type="text" id="new-username" name="new-username" required />
+        </div>
+        <div class="form-group">
+          <label for="new-password">Clave:</label>
+          <input
+            type="password"
+            id="new-password"
+            name="new-password"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Confirmar Clave:</label>
+          <input
+            type="password"
+            id="confirm-password"
+            name="confirm-password"
+            required
+          />
+        </div>
+        <div id="errorContainer" class="error-message"></div>
+        <!-- Contenedor para mensajes de error -->
+        <button type="submit" class="btn signup-btn">Registrarse</button>
+        <button type="button" class="btn login-btn" onclick="showLogin();">
+          Volver al Login
+        </button>
+      </form>
+    </div>
+
+    <!-- App de Tareas -->
+    <div id="tasks-section" class="tasks-container" style="display: none">
+      <header class="header">
+        <div class="user-info">
+          <span id="userNameDisplay">Nombre</span>
+          <div class="task-info">
+            <span id="completedTasks">Completadas: 0</span>
+            <span id="pendingTasks">Pendientes: 0</span>
+          </div>
+        </div>
+        <button class="logout-btn" onclick="logout();">Logout</button>
+      </header>
+
+      <main class="task-manager">
+        <h1>Main app tareas</h1>
+        <div class="task-actions">
+          <input type="text" id="taskName" placeholder="Nombre de la tarea" />
+          <button class="task-btn" onclick="addTask()">Crear Tarea</button>
+          <label class="checkbox-container">
+            Mostrar tareas completadas
+            <input type="checkbox" id="show-completed" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+
+        <section class="task-list" id="taskList">
+          <!-- Bloques de tarea se añadirán aquí -->
+        </section>
+      </main>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
